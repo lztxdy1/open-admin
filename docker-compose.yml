@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: open-admin-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: 123456
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./open-admin-server/src/main/resources/db/mysql/schema-mysql.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ./open-admin-server/src/main/resources/db/mysql/data-mysql.sql:/docker-entrypoint-initdb.d/2-data.sql
+  redis:
+    image: redis:7
+    container_name: open-admin-redis
+    ports:
+      - "6379:6379"

@@ -1,24 +1,83 @@
-# Compiled class file
+# =========================
+# Maven 编译产物
+# =========================
+target/
 *.class
 
-# Log file
+# =========================
+# IDEA 配置文件
+# =========================
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# Eclipse / STS 配置
+# =========================
+.project
+.classpath
+.settings/
+
+# =========================
+# VS Code 配置
+# =========================
+.vscode/
+
+# =========================
+# 日志文件
+# =========================
 *.log
+logs/
 
-# BlueJ files
-*.ctxt
+# =========================
+# 临时文件
+# =========================
+*.tmp
+*.temp
+*.swp
+*.bak
+*.orig
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# =========================
+# 操作系统文件
+# =========================
+.DS_Store
+Thumbs.db
 
-# Package Files #
+# =========================
+# Java 打包文件
+# =========================
 *.jar
 *.war
-*.nar
 *.ear
-*.zip
-*.tar.gz
-*.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# =========================
+# 但 Maven Wrapper 的 jar 不建议忽略
+# 如果项目使用 mvnw，这个文件通常需要提交
+# =========================
+!/.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# 本地配置文件
+# =========================
+application-local.yml
+application-local.yaml
+application-local.properties
+*.local
+.env
+.env.*
+
+# =========================
+# 测试 / 覆盖率报告
+# =========================
+coverage/
+jacoco.exec
+*.ec
+# Spring Boot 运行目录
+spring.log
+
+# 上传文件目录，按项目实际情况调整
+upload/
+uploads/
+files/

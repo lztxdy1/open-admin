@@ -1,0 +1,3 @@
+# open-admin-common
+
+通用模块。
